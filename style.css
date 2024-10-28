@@ -1,0 +1,160 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background: #ecf0f3;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 13px 13px 20px #cbced1,
+        -13px -13px 20px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Light theme */
+body.light {
+    background: #ecf0f3;
+}
+
+.container.light {
+    box-shadow: 13px 13px 20px #cbced1,
+        -13px -13px 20px #ffffff;
+}
+
+/* Dark theme */
+body.dark {
+    background: #1d1d1d;
+    color: #ffffff;
+}
+
+.container.dark {
+    box-shadow: 13px 13px 20px #161616,
+        -13px -13px 20px #2a2a2a;
+}
+
+.content {
+    width: 100%;
+    margin-top: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row button {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    transition: box-shadow 0.1s, background-color 0.3s;
+}
+
+.row button:hover {
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, 0.1),
+        inset -5px -5px 8px #fff;
+}
+
+.display #screen {
+    margin-bottom: .5em;
+    width: auto;
+    height: 70px;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .5em;
+    background: #ecf0f3;
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+        inset -8px -8px 8px #ffffff;
+    transition: background 0.4s ease;
+}
+
+body.dark .display #screen {
+    background: #333;
+    color: #fff;
+    box-shadow: inset 8px 8px 8px #1a1a1a,
+        inset -8px -8px 8px #444;
+}
+
+/* Update button colors for CE, AC, and = */
+#eval {
+    background: #0066cc;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #0066cc,
+        inset -5px -5px 8px #0099ff;
+}
+
+#eval:hover {
+    box-shadow: inset 5px 5px 8px #0099ff,
+        inset -5px -5px 8px #0066cc;
+}
+
+#ac {
+    background: #009966;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #006644,
+        inset -5px -5px 8px #00cc99;
+}
+
+#ac:hover {
+    box-shadow: inset 5px 5px 8px #00cc99,
+        inset -5px -5px 8px #006644;
+}
+
+#ce {
+    background: #ff6699;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #cc3366,
+        inset -5px -5px 8px #ff99cc;
+}
+
+#ce:hover {
+    box-shadow: inset 5px 5px 8px #ff99cc,
+        inset -5px -5px 8px #cc3366;
+}
+
+/* Toggle button */
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.toggle-theme.dark {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Add some fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
